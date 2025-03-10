@@ -8,7 +8,7 @@ const pacientSchema = new Schema({
         required: [true, 'Name is required.']
     },
     BirthDate: {
-        type: String,
+        type: Date,
         required: [true, 'Birth Date is required.'],
         unique: true
     }, 
@@ -26,4 +26,5 @@ const pacientSchema = new Schema({
     }
 });
 
+const pacient = mongoose.model('Pacient', pacientSchema);
 export default pacientSchema;

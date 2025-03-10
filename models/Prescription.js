@@ -21,12 +21,14 @@ const prescriptionSchema = new Schema({
     },
     instrucionts: {
         type: String,
-        required: [true, 'Instructions is required.']
+
     },
     createdAt: {
         type: Date,
         default: Date.now
     }
 });
+
+const prescription = mongoose.model('Prescription', prescriptionSchema);
 
 export default prescriptionSchema;
